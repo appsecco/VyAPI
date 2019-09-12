@@ -1,8 +1,8 @@
-# VyAPI - The Vulnerable Hybrid Android App
+# VyAPI - The Modern Cloud-Based Vulnerable Hybrid Android App
 
 ![VyAPI Logo](app/src/main/res/drawable-xxxhdpi/vyapi_main_logo.png)
 
-VyAPI is a hybrid Android app that's vulnerable by design. We call it VyAPI, because it's flaws are pervasive and it communicates not just via IPC calls but API calls, too. 
+VyAPI is a vulnerable hybrid Android app that's vulnerable by design. We call it VyAPI, because it's flaws are pervasive and it communicates not just via IPC calls but API calls, too. 
 
 Amazon Cognito has been used to handle authentication, authorization and user management. AWS Amplify Console has been used to consume the Authentication APIs provided by AWS Amplify Authentication module. Room persistence library has been used to handle data in the local SQLite database. GLide API has been used to load images. AndroidX libraries and JAVA programming language have been used to develop the business logic of VyAPI Android app. 
 
@@ -254,13 +254,14 @@ In case of bugs in the application, please create an issue on github. Pull reque
 
 ## Thanks
 
-[@makash](https://github.com/makash): For guiding and encouraging me to explore my interest area 
-Sunesh: For helping me with the documentation and picture editing
-Madhu, Bharath and Abhishek: For their feedback, suggestions and encouragement
-Riyaz and Gwil: For helping me with VyAPI logo design
-My brother (Ayush): For his creative inputs while editing the image used on vulnerable service screen
+* [@makash](https://github.com/makash): For guiding and encouraging me to explore my interest area
+* [@riyazwalikar](https://github.com/riyazwalikar) and [Gwilym](https://uk.linkedin.com/in/gwilymlewis): For helping me with VyAPI logo design 
+* [@suneshgovind](https://github.com/suneshgovind): For helping me with the documentation and picture editing
+* [madhuakula](https://github.com/madhuakula): For prompt feedback and helping with Ops tasks  
+* [yamakira](https://github.com/yamakira) and [abhisek](https://github.com/abhisek): For their feedback, suggestions and encouragement
+* Ayush Gaurav: For his creative inputs while editing the image used on vulnerable service screen
 
-Special thanks to @andresriancho and all other people whom I met through their blogposts and/or their helpful responses on stackoverflow.com, and who's work helped me clarify my concepts and, ultimately, allowed me to turn my imagination into a working model.
+Special thanks to all other people whom I met through their blogposts and/or their helpful responses on stackoverflow.com, and who's work helped me clarify my concepts and, ultimately, allowed me to turn my imagination into a working model.
 
 ## License
 
