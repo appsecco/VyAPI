@@ -252,7 +252,7 @@ The commands have been verified in a Linux environment (**Ubuntu 19.04**).
 
 In case of bugs in the application, please create an issue on github. Pull requests are highly welcome!
 
-## Thanks
+## Thank You!
 
 * [@makash](https://github.com/makash): For guiding and encouraging me to explore my interest area
 * [@riyazwalikar](https://github.com/riyazwalikar) and [Gwilym](https://uk.linkedin.com/in/gwilymlewis): For helping me with VyAPI logo design 
