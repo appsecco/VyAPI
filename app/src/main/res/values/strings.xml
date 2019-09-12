@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">VyAPI</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Break it. Be curious.</string>
+    <string name="nav_header_subtitle">\@_riddhishree</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_delete_all_contacts">Reset Contacts</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_logout">Logout</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="call_contact">Call</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="send_email">Send Email</string>
+    <string name="open_web">Open Web</string>
+    <string name="view_map">View Map</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="add_a_new_contact">Add a New Contact: </string>
+    <string name="email_address_text">Email Address</string>
+    <string name="edit_contact">Edit Contact</string>
+    <string name="edit_existing_contact">Update Contact: </string>
+    <string name="menu_play_music">Music</string>
+    <string name="menu_camera">Camera</string>
+    <string name="action_delete_all_images">Reset Gallery</string>
+    <string name="no_data">No Data</string>
+</resources>

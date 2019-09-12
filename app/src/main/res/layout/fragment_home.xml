@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/contacts_recycler_view"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/contact_item"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="false"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/iv_call"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:contentDescription="@string/call_contact"
+                android:focusable="true"
+                android:src="@drawable/call_icon" />
+
+            <ImageView
+                android:id="@+id/iv_sendsms"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:contentDescription="@string/send_sms"
+                android:focusable="true"
+                android:src="@drawable/textsms" />
+
+            <ImageView
+                android:id="@+id/iv_sendemail"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:contentDescription="@string/send_email"
+                android:focusable="true"
+                android:src="@drawable/sendemail" />
+
+            <ImageView
+                android:id="@+id/iv_openwebsite"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:contentDescription="@string/open_web"
+                android:focusable="true"
+                android:src="@drawable/openweb" />
+
+            <ImageView
+                android:id="@+id/iv_openlocation"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:contentDescription="@string/view_map"
+                android:focusable="true"
+                android:src="@mipmap/viewmap" />
+
+            <ImageView
+                android:id="@+id/iv_editcontact"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:contentDescription="@string/edit_contact"
+                android:focusable="true"
+                android:src="@drawable/edit_icon" />
+
+            <ImageView
+                android:id="@+id/iv_addnewcontact"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:contentDescription="@string/add_contact"
+                android:focusable="true"
+                android:src="@drawable/add_contact" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

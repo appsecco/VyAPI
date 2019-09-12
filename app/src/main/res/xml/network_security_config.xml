@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+
+    <!--This configuration applies to the base configuration, or the default security configuration, of the app and disables all clear text traffic if set to "false".-->
+    <!--https://codelabs.developers.google.com/codelabs/android-network-security-config/#3-->
+
+    <!--To modify the default configuration, an XML file that specifies the custom configuration
+    has to be created on the resources directory. The piece of code below shows an example of a configuration file
+    that uses the user certificates container for all HTTPS connections made by the application.-->
+    <!--https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2017/november/bypassing-androids-network-security-configuration/-->
+
+    <!--https://developer.android.com/training/articles/security-config-->
+    <!--https://www.nowsecure.com/blog/2018/08/15/a-security-analysts-guide-to-network-security-configuration-in-android-p/-->
+
+</network-security-config>
