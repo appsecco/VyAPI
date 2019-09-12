@@ -30,7 +30,22 @@ Modern technologies are eliminating security risks by blocking vulnerable featur
 *Note:* 
 The commands have been verified in a Linux environment (**Ubuntu 19.04**).
 
-## Installation Steps
+## Installation Steps (Linux)
+
+1. Install [Amplify CLI](https://github.com/aws-amplify/amplify-cli#install-the-cli)<br/>
+    ```
+    sudo npm install -g @aws-amplify/cli --unsafe-perm=true
+    ```
+    
+    *Note:* `--unsafe-perm=true` is required because of a recent issue with Amplify and [latest version of gyp](https://github.com/aws-amplify/amplify-cli/issues/1996). Ignore errors related to dependencies.
+
+2. Check if **Amplify CLI** was installed successfully
+   
+    ```
+    amplify status
+    ```
+
+## Amazon Cognito Setup
 
 1. Checkout the source code from Github
    
@@ -38,54 +53,8 @@ The commands have been verified in a Linux environment (**Ubuntu 19.04**).
    git clone git@bitbucket.org:appsecco/vulnerable-mobile-apps.git
    ```
 
-2. Install [Amplify CLI](https://github.com/aws-amplify/amplify-cli#install-the-cli)<br/>
-    ```
-    sudo npm install -g @aws-amplify/cli --unsafe-perm=true
-    ```
-    
-    *Note:* `--unsafe-perm=true` is required because of a recent issue with Amplify and [latest version of gyp](https://github.com/aws-amplify/amplify-cli/issues/1996). Ignore errors related to dependencies.
-
-3. Check if **Amplify CLI** was installed successfully
-   
-    ```
-    amplify status
-    ```
-
-4. Configure [Amplify CLI](https://github.com/aws-amplify/amplify-cli#install-the-cli) by running below command and following the instructions as displayed on the console
-
-    ```
-    amplify configure
-    ```
-
-    *Sample Output:*
-    ```shell
-    user@machine:~$ amplify configure
-    Follow these steps to set up access to your AWS account:
-    Sign in to your AWS administrator account:
-    https://console.aws.amazon.com/
-    Press Enter to continue
-    Specify the AWS Region
-    ? region:  us-east-1
-    Specify the username of the new IAM user:
-    ? user name:  amplify-user
-    Complete the user creation using the AWS console
-    https://console.aws.amazon.com/iam/home?region=undefined#/users$new?step=final&accessKey&userNames=amplify-user&permissionType=policies&policies=arn:aws:iam::aws:policy%2FAdministratorAccess
-    Press Enter to continue
-    Enter the access key of the newly created user:
-    ? accessKeyId:  A**********************
-    ? secretAccessKey:  p*************************************
-    This would update/create the AWS Profile in your local machine
-    ? Profile Name:  amplify-user
-    Successfully set up the new user.
-    ```
-
-    *Note:*
-    * It requires you to **login** into the **AWS Management Console**. 
-    * You need to create a **new user** and obtain the corresponding Access Key ID and Secret Access Key values.
-    * If you wish to reuse an existing user, skip the user creation step and press enter to enter the access key of an **existing user**.
-
-5. Enter the root directory of the cloned project.
-6. Run following command to [initialize the project](https://aws-amplify.github.io/docs/cli-toolchain/quickstart) to work with the [Amplify CLI](https://github.com/aws-amplify/amplify-cli#install-the-cli)
+2. Enter the root directory of the cloned project.
+3. Run following command to [initialize the project](https://aws-amplify.github.io/docs/cli-toolchain/quickstart) to work with the [Amplify CLI](https://github.com/aws-amplify/amplify-cli#install-the-cli)
 
     ```
     amplify init
@@ -132,7 +101,62 @@ The commands have been verified in a Linux environment (**Ubuntu 19.04**).
     Try "amplify add api" to create a backend API and then "amplify publish" to deploy everything
     ```
 
-7. Check the state of local resources not yet pushed to the cloud
+4. Configure [Amplify CLI](https://github.com/aws-amplify/amplify-cli#install-the-cli) by running below command and following the instructions as displayed on the console
+
+    ```
+    amplify configure
+    ```
+
+    *Sample Output:*
+    ```shell
+    user@machine:~$ amplify configure
+    Follow these steps to set up access to your AWS account:
+    Sign in to your AWS administrator account:
+    https://console.aws.amazon.com/
+    Press Enter to continue
+    Specify the AWS Region
+    ? region:  us-east-1
+    Specify the username of the new IAM user:
+    ? user name:  amplify-user
+    Complete the user creation using the AWS console
+    https://console.aws.amazon.com/iam/home?region=undefined#/users$new?step=final&accessKey&userNames=amplify-user&permissionType=policies&policies=arn:aws:iam::aws:policy%2FAdministratorAccess
+    Press Enter to continue
+    Enter the access key of the newly created user:
+    ? accessKeyId:  A**********************
+    ? secretAccessKey:  p*************************************
+    This would update/create the AWS Profile in your local machine
+    ? Profile Name:  amplify-user
+    Successfully set up the new user.
+    ```
+
+    *Note:*
+    * It requires you to **login** into the **AWS Management Console**. 
+    * You need to create a **new user** and obtain the corresponding Access Key ID and Secret Access Key values.
+    * If you wish to reuse an existing user, skip the user creation step and press enter to enter the access key of an **existing user**.
+
+5.  Run the following command to add authentication resource in your local backend: 
+    ```
+    amplify add auth
+    ```
+    *Sample Output:*
+    ```shell
+    user@machine:~$ amplify add auth                          
+    Using service: Cognito, provided by: awscloudformation
+    
+        The current configured provider is Amazon Cognito. 
+        
+        Do you want to use the default authentication and security configuration? Default configuration
+        Warning: you will not be able to edit these selections. 
+        How do you want users to be able to sign in? Username
+        Do you want to configure advanced settings? No, I am done.
+        Successfully added resource vyapicbc9b00d locally
+
+        Some next steps:
+        "amplify push" will build all your local backend resources and provision it in the cloud
+        "amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
+    ```
+
+6. Check the state of local resources not yet pushed to the cloud
 
     ```
     amplify status
@@ -147,13 +171,9 @@ The commands have been verified in a Linux environment (**Ubuntu 19.04**).
     | -------- | ----------------- | --------- | ----------------- |
     | Auth     | vyapimvvm59909b03 | Create    | awscloudformation |
     ```
-    
-    *Note:* If you do not see the auth resource in your local backend, then run the following command and follow the steps as instructed: 
-    ```
-    amplify add auth
-    ```
 
-8. Push the local changes to cloud
+
+7. Push the local changes to cloud
 
     ```
     amplify push
@@ -161,22 +181,22 @@ The commands have been verified in a Linux environment (**Ubuntu 19.04**).
 
     *Note:* Please be patient while this command runs, as it would take a few minutes to complete.
 
-9. Open the project in Android Studio. 
-10. Generate the VyAPI APK by selecting `Build Bundle(s)/ APK(s)` -> `Build APK(s)` in Android Studio
+8. Open the project in Android Studio. 
+9.  Generate the VyAPI APK by selecting `Build Bundle(s)/ APK(s)` -> `Build APK(s)` in Android Studio
 
     ![Build APK](app/src/main/res/drawable-xxxhdpi/build_apk.jpg)
 
-11. Obtain the VyAPI APK from the relative path `app/release/app-release.apk`
+10. Obtain the VyAPI APK from the relative path `app/release/app-release.apk`
 
     ![Built APK](app/src/main/res/drawable-xxxhdpi/built_apk.png)
 
-12. Create an [Android Emulator](https://developer.android.com/studio/run/managing-avds). 
+11. Create an [Android Emulator](https://developer.android.com/studio/run/managing-avds). 
     
     *Note:* The emulator used during the development of VyAPI had following configuration
 
     ![Android Emulator Configuration](app/src/main/res/drawable-xxxhdpi/create_android_emulator.png)
 
-13. Install the VyAPI APK (obtained from step #11, above) into the Android Emulator by running the following command
+12. Install the VyAPI APK (obtained from step #11, above) into the Android Emulator by running the following command
 
     ```
     adb install app-release.apk
