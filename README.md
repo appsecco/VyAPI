@@ -4,7 +4,7 @@
 
 VyAPI is a vulnerable hybrid Android app that's vulnerable by design. We call it VyAPI, because it's flaws are pervasive and it communicates not just via IPC calls but API calls, too. 
 
-Amazon Cognito has been used to handle authentication, authorization and user management. AWS Amplify Console has been used to consume the Authentication APIs provided by AWS Amplify Authentication module. Room persistence library has been used to handle data in the local SQLite database. GLide API has been used to load images. AndroidX libraries and JAVA programming language have been used to develop the business logic of VyAPI Android app. 
+Amazon Cognito has been used to handle authentication, authorization and user management. AWS Amplify Console has been used to consume the Authentication APIs provided by AWS Amplify Authentication module. Room persistence library has been used to handle data in the local SQLite database. Glide API has been used to load images. AndroidX libraries and JAVA programming language have been used to develop the business logic of VyAPI Android app. 
 
 We know how to attack activities, but, what could change with fragments coming into the picture? There might be a case where we just have one activity, but multiple fragments (each rendering a different functionality) in our Android app. VyAPI will allow you to experience this behavior of our modern day Android apps.
 
