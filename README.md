@@ -52,7 +52,7 @@ The commands have been verified in a Linux environment (**Ubuntu 19.04**).
 1. Checkout the source code from Github
    
    ```
-   git clone git@bitbucket.org:appsecco/vulnerable-mobile-apps.git
+   git clone git@github.com:appsecco/VyAPI.git
    ```
 
 2. Enter the root directory of the cloned project.
