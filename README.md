@@ -284,7 +284,7 @@ In case of bugs in the application, please create an issue on github. Pull reque
 * Ayush Gaurav: For his creative inputs while editing the image used on vulnerable service screen
 * Special thanks to people whom I met through their blogposts and/or their helpful responses on stackoverflow.com, and who's work helped me clarify my concepts and, ultimately, allowed me to turn my imagination into a working model.
 
-## Rreference Links
+## Reference Links
 
 * [Reference Links](app/src/main/java/com/appsecco/vyapi/misc/references.md)
 
