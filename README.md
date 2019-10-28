@@ -56,6 +56,11 @@ The commands have been verified in a Linux environment (**Ubuntu 19.04**).
    ```
 
 2. Enter the root directory of the cloned project.
+
+   ```
+   cd VyAPI/
+   ```
+
 3. Run following command to [initialize the project](https://aws-amplify.github.io/docs/cli-toolchain/quickstart) to work with the [Amplify CLI](https://github.com/aws-amplify/amplify-cli#install-the-cli)
 
     ```
