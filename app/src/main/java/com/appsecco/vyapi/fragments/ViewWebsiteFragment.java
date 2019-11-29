@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.URLUtil;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -20,6 +22,7 @@ import com.appsecco.vyapi.R;
 public class ViewWebsiteFragment extends Fragment {
 
     public static WebView wv_personal_website;
+    public static WebSettings webSettings;
 
     public ViewWebsiteFragment() {
         // Required empty public constructor
@@ -41,10 +44,15 @@ public class ViewWebsiteFragment extends Fragment {
             URL = "http://" + URL;
         }
 
-        wv_personal_website.getSettings().setJavaScriptEnabled(true);
-        wv_personal_website.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        wv_personal_website.canGoBack();
-        wv_personal_website.goBack();
+        wv_personal_website.setWebViewClient(new WebViewClient());
+        webSettings = wv_personal_website.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        wv_personal_website.setWebChromeClient(new WebChromeClient());
+
+//        wv_personal_website.getSettings().setJavaScriptEnabled(true);
+//        wv_personal_website.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+//        wv_personal_website.canGoBack();
+//        wv_personal_website.goBack();
 
         // If URL is valid, open it
         if (URLUtil.isValidUrl(URL)){

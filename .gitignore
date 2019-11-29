@@ -12,6 +12,16 @@
 /captures
 .externalNativeBuild
 
+.idea/
+.idea/gradle.xml
+
+.project
+.settings/
+amplify/
+app/.classpath
+app/.project
+app/.settings/
+
 #amplify
 amplify/\#current-cloud-backend
 amplify/.config/local-*
