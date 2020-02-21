@@ -23,7 +23,7 @@ Modern technologies are eliminating security risks by blocking vulnerable featur
 
 ## Prerequisites
 
-1. [Node.js](https://nodejs.org/en/) (Version `8.11.X` or later)
+1. [Node.js](https://nodejs.org/en/) (Latest version)
 2. [Amplify CLI](https://aws-amplify.github.io/docs/)
 3. [Android Studio and SDK Tools](https://developer.android.com/studio) (for building the APK)
 4. An active [AWS account](https://aws.amazon.com/) with Administrative access
